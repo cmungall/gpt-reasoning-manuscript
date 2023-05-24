@@ -1,10 +1,12 @@
 ---
-title: "Manuscript Title"
+title: "Reasoning over ontologies using Large Language Models"
 date: null  # Defaults to date generated, but can specify like '2022-10-31'.
 keywords:
-  - markdown
-  - publishing
-  - manubot
+  - GPT
+  - Large Language Models
+  - OWL
+  - Reasoning
+  - Ontologies
 lang: en-US
 authors:
   - github: johndoe
@@ -19,12 +21,11 @@ authors:
       - Department of Something, University of Whatever
     funders:
       - Grant XXXXXXXX
-  - github: janeroe
-    name: Jane Roe
-    initials: JR
-    orcid: XXXX-XXXX-XXXX-XXXX
-    email: jane.roe@whatever.edu
+  - github: cmungall
+    name: Chris Mungall
+    initials: CM
+    orcid: 0000-0002-6601-2165
+    email: cjmungall@lbl.gov
     affiliations:
-      - Department of Something, University of Whatever
-      - Department of Whatever, University of Something
+      - Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720
     corresponding: true
