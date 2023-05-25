@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="John Doe" />
   <meta name="author" content="Chris Mungall" />
-  <meta name="dcterms.date" content="2023-05-24" />
+  <meta name="dcterms.date" content="2023-05-25" />
   <meta name="keywords" content="GPT, Large Language Models, OWL, Reasoning, Ontologies" />
   <title>Reasoning over ontologies using Large Language Models</title>
   <style>
@@ -51,11 +51,11 @@
   <meta name="citation_title" content="Reasoning over ontologies using Large Language Models" />
   <meta property="og:title" content="Reasoning over ontologies using Large Language Models" />
   <meta property="twitter:title" content="Reasoning over ontologies using Large Language Models" />
-  <meta name="dc.date" content="2023-05-24" />
-  <meta name="citation_publication_date" content="2023-05-24" />
-  <meta property="article:published_time" content="2023-05-24" />
-  <meta name="dc.modified" content="2023-05-24T19:52:13+00:00" />
-  <meta property="article:modified_time" content="2023-05-24T19:52:13+00:00" />
+  <meta name="dc.date" content="2023-05-25" />
+  <meta name="citation_publication_date" content="2023-05-25" />
+  <meta property="article:published_time" content="2023-05-25" />
+  <meta name="dc.modified" content="2023-05-25T17:49:24+00:00" />
+  <meta property="article:modified_time" content="2023-05-25T17:49:24+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -75,9 +75,9 @@
   <meta name="citation_fulltext_html_url" content="https://cmungall.github.io/gpt-reasoning-manuscript/" />
   <meta name="citation_pdf_url" content="https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cmungall.github.io/gpt-reasoning-manuscript/v/ca9b3ae08e149db1aedf35adb2f0a676e28c7db4/" />
-  <meta name="manubot_html_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/ca9b3ae08e149db1aedf35adb2f0a676e28c7db4/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/ca9b3ae08e149db1aedf35adb2f0a676e28c7db4/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/" />
+  <meta name="manubot_html_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -94,10 +94,10 @@
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cmungall.github.io/gpt-reasoning-manuscript/v/ca9b3ae08e149db1aedf35adb2f0a676e28c7db4/">permalink</a>)
+(<a href="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cmungall/gpt-reasoning-manuscript/tree/ca9b3ae08e149db1aedf35adb2f0a676e28c7db4">cmungall/gpt-reasoning-manuscript@ca9b3ae</a>
-on May 24, 2023.
+from <a href="https://github.com/cmungall/gpt-reasoning-manuscript/tree/86066ade729c57fe753dec6cb616c4af7fe3a278">cmungall/gpt-reasoning-manuscript@86066ad</a>
+on May 25, 2023.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
@@ -148,98 +148,195 @@ of lookup.</p>
 <p>Our results indicate that a maximalist approach to using LLMs may be limiting, and that to be
 successful AI should use hybrid strategies.</p>
 <h2 id="introduction">Introduction</h2>
-<p>We…</p>
-<p>Citation by DOI <span class="citation" data-cites="IhliSZDo">[<a href="#ref-IhliSZDo" role="doc-biblioref">1</a>]</span>.</p>
-<p>xx</p>
+<h3 id="motivation">Motivation</h3>
+<p>The field of Artificial Intelligence (AI) has historically been dichotomized into two schools of thought:
+symbolic AI and connectionist AI. Symbolic AI is exemplified by ontologies and knowledge bases which represent
+knowledge as a set of symbols together with rules for manipulating those symbols. Connectionist AI is exemplified by
+deep learning and in particular Large Language Models (LLMs).</p>
+<p>Recent advances in LLMs have shown exceptional abilities in tasks such as question-answering and text summarization,
+with the use of in-context learning able to substitute for task-specific training<span class="citation" data-cites="rtNEROOT">[<a href="#ref-rtNEROOT" role="doc-biblioref">1</a>]</span>.
+The abilities of the latest generation of LLMs such as GPT-4 seem to suggest that LLMs may be able to perform
+reasoning tasks that were previously the domain of symbolic AI, in the same way that a human may incorporate
+reasoning as a part of natural language question-answering. The implication here is that symbolic AI and
+classical deductive reasoning, if this is an emergent ability of LLMs. However, the ability of LLMs to
+reason over knowledge bases has never been systematically evaluated.</p>
+<h3 id="ontological-reasoning">Ontological Reasoning</h3>
+<p>Ontology reasoning is a form of reasoning that is based on the structure of a knowledge base or ontology.</p>
+<p>Ontology reasoning underpins…</p>
+<h3 id="owl-benchmark-datasets">OWL Benchmark Datasets</h3>
+<ul>
+<li>OWL2Bench</li>
+<li>LUBM</li>
+</ul>
+<h3 id="natural-language-benchmark-datasets">Natural Language Benchmark Datasets</h3>
+<p>Existing datasets for testing reasoning ability include LogiQA <span class="citation" data-cites="I9fAgwdv">[<a href="#ref-I9fAgwdv" role="doc-biblioref">2</a>]</span>
+and ReClor <span class="citation" data-cites="ngEOG0MW">[<a href="#ref-ngEOG0MW" role="doc-biblioref">3</a>]</span>. These are aimed at testing reasoning abilities in the
+context of natural language understanding. For example, LogiQA contains as instance with paragraph
+“<em>David knows Mr. Zhang’s friend Jack, and Jack knows David’s friend Ms. Lin. Everyone of them who knows Jack has a master’s degree, and everyone of them who knows Ms. Lin is from Shanghai.</em>” and question “<em>Who is from Shanghai and has a masters degree?</em>”.
+Liu et al adapted these for evaluation using prompt-based LLMs such as GPT <span class="citation" data-cites="18cJovLK7">[<a href="#ref-18cJovLK7" role="doc-biblioref">4</a>]</span>..</p>
+<h3 id="contributions">Contributions</h3>
+<p>We make the following contributions:</p>
+<ul>
+<li>We have curated a collection of benchmarks for testing ontological reasoning ability</li>
+<li>We created a GPT-based reasoning agent that is intended to perform ontological reason using
+a few-shot learning approach, using instruction prompting and in-context examples.</li>
+<li>We have evaluated the reasoning ability of GPT-3.5-turbo and GPT-4 on these benchmarks</li>
+</ul>
 <h2 id="methods">Methods</h2>
-<p>..</p>
-<h2 id="results">Results</h2>
+<h3 id="semi-automatic-generation-of-reasoning-benchmarks-from-ontologies">Semi-automatic generation of reasoning benchmarks from ontologies</h3>
+<p>We created a methods to generate 6 classes of benchmarks</p>
 <table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">task_type</th>
-<th style="text-align: left;">method</th>
-<th style="text-align: right;">f1_score</th>
+<th>code</th>
+<th>task</th>
+<th>description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">EntailedIndirectSuperClassTask</td>
+<td>sat</td>
+<td>OntologyCoherencyTask</td>
+<td>A task to determine if an ontology is coherent. There should be a single answer, which is a boolean.</td>
+</tr>
+<tr class="even">
+<td>indirect</td>
+<td>EntailedIndirectSuperClassTask</td>
+<td>A task to determine the indirect superclasses of a class.</td>
+</tr>
+<tr class="odd">
+<td>superc</td>
+<td>EntailedTransitiveSuperClassTask</td>
+<td>A task to determine the all transitive superclasses of a class.</td>
+</tr>
+<tr class="even">
+<td>expr</td>
+<td>EntailedSubClassOfExpressionTask</td>
+<td>A task to determine the subclasses of a class expression.</td>
+</tr>
+<tr class="odd">
+<td>dir-sup</td>
+<td>EntailedDirectSuperClassTask</td>
+<td>A task to determine the direct superclasses of a class. Includes those entailed by other axioms, e.g. equivalence axioms. Context: a standard pattern in bio-ontologies is to infer the structure of one ontology from another - e.g. the metabolic process branch in GO may be entailed by GO equivalence axioms plus the IS_A links in CHEBI.</td>
+</tr>
+<tr class="even">
+<td>mrca</td>
+<td>MostRecentCommonSubsumerTask</td>
+<td>A task to determine the most specific common ancestors.</td>
+</tr>
+<tr class="odd">
+<td>abox</td>
+<td>ABoxTask</td>
+<td>A task to infer assertions over property chains and transitvity in aboxes.</td>
+</tr>
+</tbody>
+</table>
+<p>➜</p>
+<h3 id="gpt-based-reasoning-agent">GPT-based reasoning agent</h3>
+<p>We created a GPT-based reasoning agent that is intended to perform ontological reason using
+a few-shot learning approach, using instruction prompting and in-context examples.</p>
+<p>The reasoning agent is implemented as part of the OntoGPT system.</p>
+<p>3 methods for performing reasoning were implemented:</p>
+<ul>
+<li>direct</li>
+<li>post-hoc explanation-based</li>
+<li>chain-of-thought reasoning</li>
+</ul>
+<h2 id="results">Results</h2>
+<h3 id="core-results">Core Results</h3>
+<table>
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 19%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">model</th>
+<th style="text-align: left;">method</th>
+<th style="text-align: right;">abox</th>
+<th style="text-align: right;">indirect</th>
+<th style="text-align: right;">expr</th>
+<th style="text-align: right;">superc</th>
+<th style="text-align: right;">mrca</th>
+<th style="text-align: right;">sat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">gpt-3.5-turbo</td>
 <td style="text-align: left;">basic</td>
+<td style="text-align: right;">0.642144</td>
 <td style="text-align: right;">0.739145</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">EntailedIndirectSuperClassTask</td>
-<td style="text-align: left;">chain_of_thought</td>
-<td style="text-align: right;">0.587469</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">EntailedIndirectSuperClassTask</td>
-<td style="text-align: left;">explanation</td>
-<td style="text-align: right;">0.561746</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">EntailedSubClassOfExpressionTask</td>
-<td style="text-align: left;">basic</td>
 <td style="text-align: right;">0.718349</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">EntailedSubClassOfExpressionTask</td>
-<td style="text-align: left;">chain_of_thought</td>
-<td style="text-align: right;">0.623445</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">EntailedSubClassOfExpressionTask</td>
-<td style="text-align: left;">explanation</td>
-<td style="text-align: right;">0.755769</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">EntailedTransitiveSuperClassTask</td>
-<td style="text-align: left;">basic</td>
 <td style="text-align: right;">0.805197</td>
+<td style="text-align: right;">0.0666667</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">EntailedTransitiveSuperClassTask</td>
+<td style="text-align: left;">gpt-3.5-turbo</td>
 <td style="text-align: left;">chain_of_thought</td>
+<td style="text-align: right;">0.305337</td>
+<td style="text-align: right;">0.587469</td>
+<td style="text-align: right;">0.623445</td>
 <td style="text-align: right;">0.583613</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">EntailedTransitiveSuperClassTask</td>
+<td style="text-align: left;">gpt-3.5-turbo</td>
 <td style="text-align: left;">explanation</td>
+<td style="text-align: right;">0.571429</td>
+<td style="text-align: right;">0.561746</td>
+<td style="text-align: right;">0.755769</td>
 <td style="text-align: right;">0.68935</td>
+<td style="text-align: right;">0.0333333</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">MostRecentCommonSubsumerTask</td>
+<td style="text-align: left;">gpt-4</td>
 <td style="text-align: left;">basic</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.940078</td>
+<td style="text-align: right;">0.843523</td>
+<td style="text-align: right;">0.96128</td>
+<td style="text-align: right;">0.15</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">MostRecentCommonSubsumerTask</td>
+<td style="text-align: left;">gpt-4</td>
 <td style="text-align: left;">chain_of_thought</td>
+<td style="text-align: right;">0.928736</td>
+<td style="text-align: right;">0.814255</td>
+<td style="text-align: right;">0.664346</td>
+<td style="text-align: right;">0.794363</td>
+<td style="text-align: right;">0.15</td>
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">MostRecentCommonSubsumerTask</td>
+<td style="text-align: left;">gpt-4</td>
 <td style="text-align: left;">explanation</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">OntologyCoherencyTask</td>
-<td style="text-align: left;">basic</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">OntologyCoherencyTask</td>
-<td style="text-align: left;">chain_of_thought</td>
-<td style="text-align: right;">0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">OntologyCoherencyTask</td>
-<td style="text-align: left;">explanation</td>
+<td style="text-align: right;">0.994253</td>
+<td style="text-align: right;">0.813462</td>
+<td style="text-align: right;">0.848604</td>
+<td style="text-align: right;">0.960348</td>
+<td style="text-align: right;">0.183333</td>
 <td style="text-align: right;">0</td>
 </tr>
 </tbody>
 </table>
+<h3 id="obfuscation">Obfuscation</h3>
+<h3 id="effect-of-chain-lengths">Effect of chain lengths</h3>
 <h2 id="discussion">Discussion</h2>
 <p>blah</p>
 <h2 id="conclusions">Conclusions</h2>
@@ -247,8 +344,17 @@ successful AI should use hybrid strategies.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
-<div id="ref-IhliSZDo" class="csl-entry" role="doc-biblioentry">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Sci-Hub provides access to nearly all scholarly literature</strong> <div class="csl-block">Daniel S Himmelstein, Ariel Rodriguez Romero, Jacob G Levernier, Thomas Anthony Munro, Stephen Reid McLaughlin, Bastian Greshake Tzovaras, Casey S Greene</div> <em>eLife</em> (2018-03-01) <a href="https://doi.org/ckcj">https://doi.org/ckcj</a> <div class="csl-block">DOI: <a href="https://doi.org/10.7554/elife.32822">10.7554/elife.32822</a> · PMID: <a href="https://www.ncbi.nlm.nih.gov/pubmed/29424689">29424689</a> · PMCID: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5832410">PMC5832410</a></div></div>
+<div id="ref-rtNEROOT" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline"><strong>Language Models are Few-Shot Learners</strong> <div class="csl-block">Tom B Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, … Dario Amodei</div> <em>arXiv</em> (2020) <a href="https://doi.org/gpmv43">https://doi.org/gpmv43</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.2005.14165">10.48550/arxiv.2005.14165</a></div></div>
+</div>
+<div id="ref-I9fAgwdv" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline"><strong>LogiQA: A Challenge Dataset for Machine Reading Comprehension with Logical Reasoning</strong> <div class="csl-block">Jian Liu, Leyang Cui, Hanmeng Liu, Dandan Huang, Yile Wang, Yue Zhang</div> <em>arXiv</em> (2020) <a href="https://doi.org/gr9cn5">https://doi.org/gr9cn5</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.2007.08124">10.48550/arxiv.2007.08124</a></div></div>
+</div>
+<div id="ref-ngEOG0MW" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline"><strong>ReClor: A Reading Comprehension Dataset Requiring Logical Reasoning</strong> <div class="csl-block">Weihao Yu, Zihang Jiang, Yanfei Dong, Jiashi Feng</div> <em>arXiv</em> (2020) <a href="https://doi.org/gr9cn4">https://doi.org/gr9cn4</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.2002.04326">10.48550/arxiv.2002.04326</a></div></div>
+</div>
+<div id="ref-18cJovLK7" class="csl-entry" role="doc-biblioentry">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline"><strong>Evaluating the Logical Reasoning Ability of ChatGPT and GPT-4</strong> <div class="csl-block">Hanmeng Liu, Ruoxi Ning, Zhiyang Teng, Jian Liu, Qiji Zhou, Yue Zhang</div> <em>arXiv</em> (2023) <a href="https://doi.org/gr9cn6">https://doi.org/gr9cn6</a> <div class="csl-block">DOI: <a href="https://doi.org/10.48550/arxiv.2304.03439">10.48550/arxiv.2304.03439</a></div></div>
 </div>
 </div>
 <!-- default theme -->
