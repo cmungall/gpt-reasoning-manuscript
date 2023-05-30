@@ -3,15 +3,16 @@ aboxes
 ABoxTask
 CHEBI
 cmungall
-Connectionist
-datasets
+connectionist
+Datasets
 dichotomized
 EntailedDirectSuperClassTask
 EntailedIndirectSuperClassTask
 EntailedSubClassOfExpressionTask
 EntailedTransitiveSuperClassTask
+expl
 expr
-GPT
+gpt
 hoc
 johndoe
 Liu
@@ -21,6 +22,7 @@ LUBM
 maximalist
 MostRecentCommonSubsumerTask
 mrca
+mthd
 Mungall
 OntoGPT
 ontologies
@@ -30,6 +32,7 @@ subclasses
 summarization
 superc
 superclasses
+TODO
 transitvity
 XXXX
 XXXXXXXX

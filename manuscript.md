@@ -7,7 +7,7 @@ keywords:
 - Reasoning
 - Ontologies
 lang: en-US
-date-meta: '2023-05-25'
+date-meta: '2023-05-30'
 author-meta:
 - John Doe
 - Chris Mungall
@@ -22,11 +22,11 @@ header-includes: |
   <meta name="citation_title" content="Reasoning over ontologies using Large Language Models" />
   <meta property="og:title" content="Reasoning over ontologies using Large Language Models" />
   <meta property="twitter:title" content="Reasoning over ontologies using Large Language Models" />
-  <meta name="dc.date" content="2023-05-25" />
-  <meta name="citation_publication_date" content="2023-05-25" />
-  <meta property="article:published_time" content="2023-05-25" />
-  <meta name="dc.modified" content="2023-05-25T17:49:24+00:00" />
-  <meta property="article:modified_time" content="2023-05-25T17:49:24+00:00" />
+  <meta name="dc.date" content="2023-05-30" />
+  <meta name="citation_publication_date" content="2023-05-30" />
+  <meta property="article:published_time" content="2023-05-30" />
+  <meta name="dc.modified" content="2023-05-30T18:46:22+00:00" />
+  <meta property="article:modified_time" content="2023-05-30T18:46:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -46,9 +46,9 @@ header-includes: |
   <meta name="citation_fulltext_html_url" content="https://cmungall.github.io/gpt-reasoning-manuscript/" />
   <meta name="citation_pdf_url" content="https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/" />
-  <meta name="manubot_html_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/" />
+  <meta name="manubot_html_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -70,10 +70,10 @@ manubot-clear-requests-cache: false
 
 <small><em>
 This manuscript
-([permalink](https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/))
+([permalink](https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/))
 was automatically generated
-from [cmungall/gpt-reasoning-manuscript@86066ad](https://github.com/cmungall/gpt-reasoning-manuscript/tree/86066ade729c57fe753dec6cb616c4af7fe3a278)
-on May 25, 2023.
+from [cmungall/gpt-reasoning-manuscript@fba1ca3](https://github.com/cmungall/gpt-reasoning-manuscript/tree/fba1ca342483d3961a7bdb85d0d58485561ad9a3)
+on May 30, 2023.
 </em></small>
 
 
@@ -161,9 +161,11 @@ reason over knowledge bases has never been systematically evaluated.
 
 Ontology reasoning is a form of reasoning that is based on the structure of a knowledge base or ontology.
 
-Ontology reasoning underpins...
+Ontology reasoning underpins... TODO
 
 ### OWL Benchmark Datasets
+
+TODO
 
 - OWL2Bench
 - LUBM
@@ -186,6 +188,8 @@ We make the following contributions:
 - We have evaluated the reasoning ability of GPT-3.5-turbo and GPT-4 on these benchmarks
 
 ## Methods
+
+TEST: 1
 
 ### Semi-automatic generation of reasoning benchmarks from ontologies
 
@@ -215,20 +219,191 @@ The reasoning agent is implemented as part of the OntoGPT system.
 - post-hoc explanation-based
 - chain-of-thought reasoning
 
+#### Direct reasoning
+
 ## Results
 
 ### Core Results
 
-| model         | method           |     abox |   indirect |     expr |   superc |      mrca |   sat |
-|:--------------|:-----------------|---------:|-----------:|---------:|---------:|----------:|------:|
-| gpt-3.5-turbo | basic            | 0.642144 |   0.739145 | 0.718349 | 0.805197 | 0.0666667 |     0 |
-| gpt-3.5-turbo | chain_of_thought | 0.305337 |   0.587469 | 0.623445 | 0.583613 | 0.1       |     0 |
-| gpt-3.5-turbo | explanation      | 0.571429 |   0.561746 | 0.755769 | 0.68935  | 0.0333333 |     0 |
-| gpt-4         | basic            | 1        |   0.940078 | 0.843523 | 0.96128  | 0.15      |     0 |
-| gpt-4         | chain_of_thought | 0.928736 |   0.814255 | 0.664346 | 0.794363 | 0.15      |     0 |
-| gpt-4         | explanation      | 0.994253 |   0.813462 | 0.848604 | 0.960348 | 0.183333  |     0 |
+<style type="text/css">
+#T_1946c_row0_col4, #T_1946c_row1_col4, #T_1946c_row2_col4, #T_1946c_row3_col0, #T_1946c_row3_col2, #T_1946c_row3_col4, #T_1946c_row3_col5, #T_1946c_row4_col4, #T_1946c_row5_col1, #T_1946c_row5_col3, #T_1946c_row5_col4 {
+  font-weight: bold;
+}
+</style>
+<table id="T_1946c">
+  <thead>
+    <tr>
+      <th class="blank" >&nbsp;</th>
+      <th class="index_name level0" >task</th>
+      <th id="T_1946c_level0_col0" class="col_heading level0 col0" >abox</th>
+      <th id="T_1946c_level0_col1" class="col_heading level0 col1" >expr</th>
+      <th id="T_1946c_level0_col2" class="col_heading level0 col2" >indirect</th>
+      <th id="T_1946c_level0_col3" class="col_heading level0 col3" >mrca</th>
+      <th id="T_1946c_level0_col4" class="col_heading level0 col4" >sat</th>
+      <th id="T_1946c_level0_col5" class="col_heading level0 col5" >superc</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >model</th>
+      <th class="index_name level1" >mthd</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_1946c_level0_row0" class="row_heading level0 row0" rowspan="3">gpt-3.5-turbo</th>
+      <th id="T_1946c_level1_row0" class="row_heading level1 row0" >basic</th>
+      <td id="T_1946c_row0_col0" class="data row0 col0" >0.642</td>
+      <td id="T_1946c_row0_col1" class="data row0 col1" >0.718</td>
+      <td id="T_1946c_row0_col2" class="data row0 col2" >0.739</td>
+      <td id="T_1946c_row0_col3" class="data row0 col3" >0.067</td>
+      <td id="T_1946c_row0_col4" class="data row0 col4" >0.000</td>
+      <td id="T_1946c_row0_col5" class="data row0 col5" >0.805</td>
+    </tr>
+    <tr>
+      <th id="T_1946c_level1_row1" class="row_heading level1 row1" >cot</th>
+      <td id="T_1946c_row1_col0" class="data row1 col0" >0.305</td>
+      <td id="T_1946c_row1_col1" class="data row1 col1" >0.623</td>
+      <td id="T_1946c_row1_col2" class="data row1 col2" >0.587</td>
+      <td id="T_1946c_row1_col3" class="data row1 col3" >0.100</td>
+      <td id="T_1946c_row1_col4" class="data row1 col4" >0.000</td>
+      <td id="T_1946c_row1_col5" class="data row1 col5" >0.584</td>
+    </tr>
+    <tr>
+      <th id="T_1946c_level1_row2" class="row_heading level1 row2" >expl</th>
+      <td id="T_1946c_row2_col0" class="data row2 col0" >0.571</td>
+      <td id="T_1946c_row2_col1" class="data row2 col1" >0.756</td>
+      <td id="T_1946c_row2_col2" class="data row2 col2" >0.562</td>
+      <td id="T_1946c_row2_col3" class="data row2 col3" >0.033</td>
+      <td id="T_1946c_row2_col4" class="data row2 col4" >0.000</td>
+      <td id="T_1946c_row2_col5" class="data row2 col5" >0.689</td>
+    </tr>
+    <tr>
+      <th id="T_1946c_level0_row3" class="row_heading level0 row3" rowspan="3">gpt-4</th>
+      <th id="T_1946c_level1_row3" class="row_heading level1 row3" >basic</th>
+      <td id="T_1946c_row3_col0" class="data row3 col0" >1.000</td>
+      <td id="T_1946c_row3_col1" class="data row3 col1" >0.844</td>
+      <td id="T_1946c_row3_col2" class="data row3 col2" >0.940</td>
+      <td id="T_1946c_row3_col3" class="data row3 col3" >0.150</td>
+      <td id="T_1946c_row3_col4" class="data row3 col4" >0.000</td>
+      <td id="T_1946c_row3_col5" class="data row3 col5" >0.961</td>
+    </tr>
+    <tr>
+      <th id="T_1946c_level1_row4" class="row_heading level1 row4" >cot</th>
+      <td id="T_1946c_row4_col0" class="data row4 col0" >0.929</td>
+      <td id="T_1946c_row4_col1" class="data row4 col1" >0.664</td>
+      <td id="T_1946c_row4_col2" class="data row4 col2" >0.814</td>
+      <td id="T_1946c_row4_col3" class="data row4 col3" >0.150</td>
+      <td id="T_1946c_row4_col4" class="data row4 col4" >0.000</td>
+      <td id="T_1946c_row4_col5" class="data row4 col5" >0.794</td>
+    </tr>
+    <tr>
+      <th id="T_1946c_level1_row5" class="row_heading level1 row5" >expl</th>
+      <td id="T_1946c_row5_col0" class="data row5 col0" >0.994</td>
+      <td id="T_1946c_row5_col1" class="data row5 col1" >0.849</td>
+      <td id="T_1946c_row5_col2" class="data row5 col2" >0.813</td>
+      <td id="T_1946c_row5_col3" class="data row5 col3" >0.183</td>
+      <td id="T_1946c_row5_col4" class="data row5 col4" >0.000</td>
+      <td id="T_1946c_row5_col5" class="data row5 col5" >0.960</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Obfuscation
+
+<style type="text/css">
+#T_76227_row0_col4, #T_76227_row1_col4, #T_76227_row2_col4, #T_76227_row3_col0, #T_76227_row3_col2, #T_76227_row3_col3, #T_76227_row3_col4, #T_76227_row3_col5, #T_76227_row4_col1, #T_76227_row4_col3, #T_76227_row4_col4, #T_76227_row5_col4 {
+  font-weight: bold;
+}
+</style>
+<table id="T_76227">
+  <thead>
+    <tr>
+      <th class="blank" >&nbsp;</th>
+      <th class="index_name level0" >task</th>
+      <th id="T_76227_level0_col0" class="col_heading level0 col0" >abox</th>
+      <th id="T_76227_level0_col1" class="col_heading level0 col1" >expr</th>
+      <th id="T_76227_level0_col2" class="col_heading level0 col2" >indirect</th>
+      <th id="T_76227_level0_col3" class="col_heading level0 col3" >mrca</th>
+      <th id="T_76227_level0_col4" class="col_heading level0 col4" >sat</th>
+      <th id="T_76227_level0_col5" class="col_heading level0 col5" >superc</th>
+    </tr>
+    <tr>
+      <th class="index_name level0" >model</th>
+      <th class="index_name level1" >method</th>
+      <th class="blank col0" >&nbsp;</th>
+      <th class="blank col1" >&nbsp;</th>
+      <th class="blank col2" >&nbsp;</th>
+      <th class="blank col3" >&nbsp;</th>
+      <th class="blank col4" >&nbsp;</th>
+      <th class="blank col5" >&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_76227_level0_row0" class="row_heading level0 row0" rowspan="3">gpt-3.5-turbo</th>
+      <th id="T_76227_level1_row0" class="row_heading level1 row0" >basic</th>
+      <td id="T_76227_row0_col0" class="data row0 col0" >0.000</td>
+      <td id="T_76227_row0_col1" class="data row0 col1" >0.270</td>
+      <td id="T_76227_row0_col2" class="data row0 col2" >0.256</td>
+      <td id="T_76227_row0_col3" class="data row0 col3" >0.000</td>
+      <td id="T_76227_row0_col4" class="data row0 col4" >0.000</td>
+      <td id="T_76227_row0_col5" class="data row0 col5" >0.426</td>
+    </tr>
+    <tr>
+      <th id="T_76227_level1_row1" class="row_heading level1 row1" >chain_of_thought</th>
+      <td id="T_76227_row1_col0" class="data row1 col0" >0.000</td>
+      <td id="T_76227_row1_col1" class="data row1 col1" >0.131</td>
+      <td id="T_76227_row1_col2" class="data row1 col2" >0.161</td>
+      <td id="T_76227_row1_col3" class="data row1 col3" >0.100</td>
+      <td id="T_76227_row1_col4" class="data row1 col4" >0.000</td>
+      <td id="T_76227_row1_col5" class="data row1 col5" >0.390</td>
+    </tr>
+    <tr>
+      <th id="T_76227_level1_row2" class="row_heading level1 row2" >explanation</th>
+      <td id="T_76227_row2_col0" class="data row2 col0" >0.000</td>
+      <td id="T_76227_row2_col1" class="data row2 col1" >0.216</td>
+      <td id="T_76227_row2_col2" class="data row2 col2" >0.207</td>
+      <td id="T_76227_row2_col3" class="data row2 col3" >0.050</td>
+      <td id="T_76227_row2_col4" class="data row2 col4" >0.000</td>
+      <td id="T_76227_row2_col5" class="data row2 col5" >0.471</td>
+    </tr>
+    <tr>
+      <th id="T_76227_level0_row3" class="row_heading level0 row3" rowspan="3">gpt-4</th>
+      <th id="T_76227_level1_row3" class="row_heading level1 row3" >basic</th>
+      <td id="T_76227_row3_col0" class="data row3 col0" >0.764</td>
+      <td id="T_76227_row3_col1" class="data row3 col1" >0.551</td>
+      <td id="T_76227_row3_col2" class="data row3 col2" >0.837</td>
+      <td id="T_76227_row3_col3" class="data row3 col3" >0.200</td>
+      <td id="T_76227_row3_col4" class="data row3 col4" >0.000</td>
+      <td id="T_76227_row3_col5" class="data row3 col5" >0.912</td>
+    </tr>
+    <tr>
+      <th id="T_76227_level1_row4" class="row_heading level1 row4" >chain_of_thought</th>
+      <td id="T_76227_row4_col0" class="data row4 col0" >0.568</td>
+      <td id="T_76227_row4_col1" class="data row4 col1" >0.818</td>
+      <td id="T_76227_row4_col2" class="data row4 col2" >0.506</td>
+      <td id="T_76227_row4_col3" class="data row4 col3" >0.200</td>
+      <td id="T_76227_row4_col4" class="data row4 col4" >0.000</td>
+      <td id="T_76227_row4_col5" class="data row4 col5" >0.718</td>
+    </tr>
+    <tr>
+      <th id="T_76227_level1_row5" class="row_heading level1 row5" >explanation</th>
+      <td id="T_76227_row5_col0" class="data row5 col0" >0.631</td>
+      <td id="T_76227_row5_col1" class="data row5 col1" >0.728</td>
+      <td id="T_76227_row5_col2" class="data row5 col2" >0.701</td>
+      <td id="T_76227_row5_col3" class="data row5 col3" >0.167</td>
+      <td id="T_76227_row5_col4" class="data row5 col4" >0.000</td>
+      <td id="T_76227_row5_col5" class="data row5 col5" >0.812</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Effect of chain lengths
 
