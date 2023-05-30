@@ -1,7 +1,7 @@
 # Output directory containing the formatted manuscript
 
 The [`gh-pages`](https://github.com/cmungall/gpt-reasoning-manuscript/tree/gh-pages) branch hosts the contents of this directory at <https://cmungall.github.io/gpt-reasoning-manuscript/>.
-The permalink for this webpage version is <https://cmungall.github.io/gpt-reasoning-manuscript/v/86066ade729c57fe753dec6cb616c4af7fe3a278/>.
+The permalink for this webpage version is <https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/>.
 To redirect to the permalink for the latest manuscript version at anytime, use the link <https://cmungall.github.io/gpt-reasoning-manuscript/v/freeze/>.
 
 ## Files
@@ -35,4 +35,4 @@ Verifying timestamps with the `ots verify` command requires running a local bitc
 ## Source
 
 The manuscripts in this directory were built from
-[`86066ade729c57fe753dec6cb616c4af7fe3a278`](https://github.com/cmungall/gpt-reasoning-manuscript/commit/86066ade729c57fe753dec6cb616c4af7fe3a278).
+[`fba1ca342483d3961a7bdb85d0d58485561ad9a3`](https://github.com/cmungall/gpt-reasoning-manuscript/commit/fba1ca342483d3961a7bdb85d0d58485561ad9a3).
