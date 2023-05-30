@@ -29,6 +29,7 @@ PANDOC_DATA_DIR="${PANDOC_DATA_DIR:-build/pandoc}"
 # Generate reference information
 echo >&2 "Retrieving and processing reference metadata"
 manubot process \
+  --template-variables-path=vars.json \
   --content-directory=content \
   --output-directory=output \
   --cache-directory=ci/cache \
