@@ -4,11 +4,13 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="John Doe" />
+  <meta name="author" content="Sierra Moxon" />
+  <meta name="author" content="Nico Matentzoglu" />
+  <meta name="author" content="Hyeongsik Kim" />
   <meta name="author" content="Chris Mungall" />
-  <meta name="dcterms.date" content="2023-05-30" />
+  <meta name="dcterms.date" content="2023-06-07" />
   <meta name="keywords" content="GPT, Large Language Models, OWL, Reasoning, Ontologies" />
-  <title>Reasoning over ontologies using Large Language Models</title>
+  <title>Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -21,6 +23,69 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
@@ -47,25 +112,28 @@
   -->
   <meta name="dc.format" content="text/html" />
   <meta property="og:type" content="article" />
-  <meta name="dc.title" content="Reasoning over ontologies using Large Language Models" />
-  <meta name="citation_title" content="Reasoning over ontologies using Large Language Models" />
-  <meta property="og:title" content="Reasoning over ontologies using Large Language Models" />
-  <meta property="twitter:title" content="Reasoning over ontologies using Large Language Models" />
-  <meta name="dc.date" content="2023-05-30" />
-  <meta name="citation_publication_date" content="2023-05-30" />
-  <meta property="article:published_time" content="2023-05-30" />
-  <meta name="dc.modified" content="2023-05-30T18:46:22+00:00" />
-  <meta property="article:modified_time" content="2023-05-30T18:46:22+00:00" />
+  <meta name="dc.title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
+  <meta name="citation_title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
+  <meta property="og:title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
+  <meta property="twitter:title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
+  <meta name="dc.date" content="2023-06-07" />
+  <meta name="citation_publication_date" content="2023-06-07" />
+  <meta property="article:published_time" content="2023-06-07" />
+  <meta name="dc.modified" content="2023-06-07T02:56:52+00:00" />
+  <meta property="article:modified_time" content="2023-06-07T02:56:52+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
   <meta name="dc.publisher" content="Manubot" />
   <meta name="citation_journal_title" content="Manubot" />
   <meta name="citation_technical_report_institution" content="Manubot" />
-  <meta name="citation_author" content="John Doe" />
-  <meta name="citation_author_institution" content="Department of Something, University of Whatever" />
+  <meta name="citation_author" content="Sierra Moxon" />
+  <meta name="citation_author_institution" content="Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720" />
   <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
-  <meta name="twitter:creator" content="@johndoe" />
+  <meta name="citation_author" content="Nico Matentzoglu" />
+  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
+  <meta name="citation_author" content="Hyeongsik Kim" />
+  <meta name="citation_author_orcid" content="XXXX-XXXX-XXXX-XXXX" />
   <meta name="citation_author" content="Chris Mungall" />
   <meta name="citation_author_institution" content="Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720" />
   <meta name="citation_author_orcid" content="0000-0002-6601-2165" />
@@ -75,9 +143,9 @@
   <meta name="citation_fulltext_html_url" content="https://cmungall.github.io/gpt-reasoning-manuscript/" />
   <meta name="citation_pdf_url" content="https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf" />
   <link rel="alternate" type="application/pdf" href="https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf" />
-  <link rel="alternate" type="text/html" href="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/" />
-  <meta name="manubot_html_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/" />
-  <meta name="manubot_pdf_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/manuscript.pdf" />
+  <link rel="alternate" type="text/html" href="https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/" />
+  <meta name="manubot_html_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/" />
+  <meta name="manubot_pdf_url_versioned" content="https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/manuscript.pdf" />
   <meta property="og:type" content="article" />
   <meta property="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" sizes="192x192" href="https://manubot.org/favicon-192x192.png" />
@@ -90,31 +158,43 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Reasoning over ontologies using Large Language Models</h1>
+<h1 class="title">Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches</h1>
 </header>
 <p><small><em>
 This manuscript
-(<a href="https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/">permalink</a>)
+(<a href="https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/">permalink</a>)
 was automatically generated
-from <a href="https://github.com/cmungall/gpt-reasoning-manuscript/tree/fba1ca342483d3961a7bdb85d0d58485561ad9a3">cmungall/gpt-reasoning-manuscript@fba1ca3</a>
-on May 30, 2023.
+from <a href="https://github.com/cmungall/gpt-reasoning-manuscript/tree/52cc8412aaa67f4d86d1594fe98b7c96188225a9">cmungall/gpt-reasoning-manuscript@52cc841</a>
+on June 7, 2023.
 </em></small></p>
 <h2 id="authors">Authors</h2>
 <ul>
-<li><p><strong>John Doe</strong>
+<li><p><strong>Sierra Moxon</strong>
 <br>
 <img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
 <a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
 · <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
-<a href="https://github.com/johndoe">johndoe</a>
-· <img src="images/twitter.svg" class="inline_icon" width="16" height="16" alt="Twitter icon" />
-<a href="https://twitter.com/johndoe">johndoe</a>
-· <img src="images/mastodon.svg" class="inline_icon" width="16" height="16" alt="Mastodon icon" />
-<a href="https://mastodon.social/@johndoe">@johndoe@mastodon.social</a>
+<a href="https://github.com/sierra-moxon">sierra-moxon</a>
 <br>
 <small>
-Department of Something, University of Whatever
+Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720
 · Funded by Grant XXXXXXXX
+</small></p></li>
+<li><p><strong>Nico Matentzoglu</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
+· <img src="images/github.svg" class="inline_icon" width="16" height="16" alt="GitHub icon" />
+<a href="https://github.com/matentzn">matentzn</a>
+<br>
+<small>
+</small></p></li>
+<li><p><strong>Hyeongsik Kim</strong>
+<br>
+<img src="images/orcid.svg" class="inline_icon" width="16" height="16" alt="ORCID icon" />
+<a href="https://orcid.org/XXXX-XXXX-XXXX-XXXX">XXXX-XXXX-XXXX-XXXX</a>
+<br>
+<small>
 </small></p></li>
 <li><p><strong>Chris Mungall</strong>
 <sup><a href="#correspondence">✉</a></sup><br>
@@ -133,48 +213,60 @@ or email to
 Chris Mungall &lt;cjmungall@lbl.gov&gt;.</p>
 </div>
 <h2 class="page_break_before" id="abstract">Abstract</h2>
-<p>Reasoning is a core component of human intelligence, and a key goal of AI research.
+<p>Reasoning is a core component of human intelligence, and a key goal of Artificial Intelligence (AI) research.
 Reasoning has traditionally been the domain of symbolic AI, but recent advances in deep learning
-and in particular Large Language Models (LLMs) such as GPT-3 seem to suggest that LLMs have
-some latent reasoning ability.</p>
-<p>To investigate this, we created a GPT-based reasoning agent that is intended to perform ontological reason using
-a few-shot learning approach, using instruction prompting and in-context examples.
-We also created a series of benchmarks to test ontological reasoning ability in LLMs and other systems.</p>
-<p>Our results indicate that GPT is a poor reasoner, and is only able to perform ontological reasoning
-on some of the simplest tasks. Even on these simple tasks, results are highly variable, with performance
-degrading as the size of the ontology and the complexity of the explanation increases. In the cases
-where it does successfully perform the task, this seems to essentially be an advanced pattern-based form
-of lookup.</p>
-<p>Our results indicate that a maximalist approach to using LLMs may be limiting, and that to be
-successful AI should use hybrid strategies.</p>
+and in particular Large Language Models (LLMs) such as GPT-4 indicate that LLMs may have
+some latent reasoning ability. This has been investigated in some domains such as mathematical reasoning,
+but the ability of LLMs to reason over knowledge representation formalisms such as Description Logics (DL) has not been
+systematically tested. Understanding the accuracy of this latent reasoning behavior is important for
+designing LLM-based applications, in particular in deciding between single-pass approaches vs hybrid
+or multi-agent approaches.</p>
+<p>To investigate the latent abilities of LLMs to perform symbolic ontological reasoning, we
+created a series of benchmarks covering the EL++ fragment of the Web Ontology Language (OWL).
+We also created a GPT-based reasoning agent that uses a few-shot in-context learning approach to reason
+over OWL ontologies.</p>
+<p>Our results show that for small ontologies and certain simple tasks such as transitive SubClassOf
+reasoning, or inferring familial relationships, GPT-4 frequently yields the correct answers to
+benchmark questions, although less than the 100% guaranteed accuracy of a symbolic reasoner. For other
+tasks, LLMs performed less well, and in particular LLMs seem fundamentally unable to detect
+inconsistencies in even simple small test cases.</p>
+<p>Our results indicate that a maximalist single-pass approach to building LLMs knowledge-based applications inherently
+leads to lower accuracy, and that a hybrid multi-agent approach combining the best aspects of
+language models and symbolic reasoning over knowledge bases should be favored.</p>
+<p>Code is available from https://github.com/monarch-initiative/ontogpt, and analysis from TODO zenodo DOI</p>
 <h2 id="introduction">Introduction</h2>
 <h3 id="motivation">Motivation</h3>
-<p>The field of Artificial Intelligence (AI) has historically been dichotomized into two schools of thought:
-symbolic AI and connectionist AI. Symbolic AI is exemplified by ontologies and knowledge bases which represent
-knowledge as a set of symbols together with rules for manipulating those symbols. Connectionist AI is exemplified by
-deep learning and in particular Large Language Models (LLMs).</p>
-<p>Recent advances in LLMs have shown exceptional abilities in tasks such as question-answering and text summarization,
-with the use of in-context learning able to substitute for task-specific training<span class="citation" data-cites="rtNEROOT">[<a href="#ref-rtNEROOT" role="doc-biblioref">1</a>]</span>.
+<p>The field of Artificial Intelligence (AI) has historically been divided into two schools of thought:
+symbolic AI and connectionist AI. Symbolic AI is exemplified by ontologies and knowledge bases, which represent
+knowledge as a set of symbols together with rules or formal model theories for manipulating those symbols.
+Connectionist AI is exemplified by methods derived from statistics and machine learning, in more recently deep learning neural network
+architectures. The field of neurosymbolic AI aims to combine the best aspects of both symbolic and connectionist AI,
+but currently most approaches fall in one of the two camps.</p>
+<p>The most striking recent development in machine learning has been the development of Large Language Models (LLMs),
+which show exceptional abilities in tasks such as question-answering and text summarization,
+as well as the ability to generalize from a handful of examples (in context or few-shot learning)
+<span class="citation" data-cites="rtNEROOT">[<a href="#ref-rtNEROOT" role="doc-biblioref">1</a>]</span>.
 The abilities of the latest generation of LLMs such as GPT-4 seem to suggest that LLMs may be able to perform
 reasoning tasks that were previously the domain of symbolic AI, in the same way that a human may incorporate
-reasoning as a part of natural language question-answering. The implication here is that symbolic AI and
-classical deductive reasoning, if this is an emergent ability of LLMs. However, the ability of LLMs to
-reason over knowledge bases has never been systematically evaluated.</p>
-<h3 id="ontological-reasoning">Ontological Reasoning</h3>
-<p>Ontology reasoning is a form of reasoning that is based on the structure of a knowledge base or ontology.</p>
-<p>Ontology reasoning underpins… TODO</p>
-<h3 id="owl-benchmark-datasets">OWL Benchmark Datasets</h3>
-<p>TODO</p>
-<ul>
-<li>OWL2Bench</li>
-<li>LUBM</li>
-</ul>
-<h3 id="natural-language-benchmark-datasets">Natural Language Benchmark Datasets</h3>
-<p>Existing datasets for testing reasoning ability include LogiQA <span class="citation" data-cites="I9fAgwdv">[<a href="#ref-I9fAgwdv" role="doc-biblioref">2</a>]</span>
-and ReClor <span class="citation" data-cites="ngEOG0MW">[<a href="#ref-ngEOG0MW" role="doc-biblioref">3</a>]</span>. These are aimed at testing reasoning abilities in the
+reasoning as a part of natural language question-answering. If LLMs are in fact able to effectively perform symbolic reasoning as part of their normal prompt completion process, this would suggest less of a role for symbolic AI and
+explicit rule-based reasoning. If instead LLMs are only able to perform reasoning in a limited set of circumstances,
+this would suggest that LLM-based applications should employ hybrid or multi-agent approaches. An example
+of this approach is frameworks such as LangChain, or the ChatGPT plugin system which allows interfacing with external Python programs or tools such as Mathematica.</p>
+<p>Some previous studies have examined the mathematical reasoning abilities of LLMs, and others have
+examined “common-sense” reasoning abilities. Existing datasets for testing reasoning ability include LogiQA <span class="citation" data-cites="I9fAgwdv">[<a href="#ref-I9fAgwdv" role="doc-biblioref">2</a>]</span> and ReClor <span class="citation" data-cites="ngEOG0MW">[<a href="#ref-ngEOG0MW" role="doc-biblioref">3</a>]</span>. These are aimed at testing reasoning abilities in the
 context of natural language understanding. For example, LogiQA contains as instance with paragraph
 “<em>David knows Mr. Zhang’s friend Jack, and Jack knows David’s friend Ms. Lin. Everyone of them who knows Jack has a master’s degree, and everyone of them who knows Ms. Lin is from Shanghai.</em>” and question “<em>Who is from Shanghai and has a masters degree?</em>”.
-Liu et al adapted these for evaluation using prompt-based LLMs such as GPT <span class="citation" data-cites="18cJovLK7">[<a href="#ref-18cJovLK7" role="doc-biblioref">4</a>]</span>..</p>
+Liu et al adapted these for evaluation using prompt-based LLMs such as GPT <span class="citation" data-cites="18cJovLK7">[<a href="#ref-18cJovLK7" role="doc-biblioref">4</a>]</span>.</p>
+<p>However, there are no LLM-based benchmarks for testing the kinds of symbolic reasoning abilities
+needed for working with ontologies and knowledge bases such as the Gene Ontology (GO) or the
+Human Phenotype Ontology (HPO). These abilities are necessary for using ontologies in tasks such
+as interpreting high-throughput genomic data or prioritizing variants in genetic diseases. Existing
+OWL reasoning benchmarks such as OWL2Bench and LUBM are designed to test the performance at scale rather
+than accuracy, since accuracy can generally be proven based on the formal semantics of ontology languages.</p>
+<p>Here we describe the creation of a set of benchmarks that can be used to test the reasoning abilities
+of LLMs against the commonly used EL++ subset of the Description Logic (DL) language, OWL (Web Ontology Language).
+We created a reasoner agent ReasonerGPT that uses an in-context approach to solving reasoning problems, and
+we evaluated this against our benchmarks.</p>
 <h3 id="contributions">Contributions</h3>
 <p>We make the following contributions:</p>
 <ul>
@@ -184,494 +276,418 @@ a few-shot learning approach, using instruction prompting and in-context example
 <li>We have evaluated the reasoning ability of GPT-3.5-turbo and GPT-4 on these benchmarks</li>
 </ul>
 <h2 id="methods">Methods</h2>
-<p>TEST: 1</p>
 <h3 id="semi-automatic-generation-of-reasoning-benchmarks-from-ontologies">Semi-automatic generation of reasoning benchmarks from ontologies</h3>
-<p>We created a methods to generate 6 classes of benchmarks</p>
-<table>
+<p>We created a methods to generate 8 classes of benchmarks, summarized in <a href="#tbl:tasks">1</a></p>
+<div id="tbl:tasks" class="tablenos">
+<table id="tbl:tasks">
+<caption><span>Table 1:</span> Different ontology tasks
+</caption>
 <colgroup>
-<col style="width: 33%" />
-<col style="width: 33%" />
-<col style="width: 33%" />
+<col style="width: 9%" />
+<col style="width: 28%" />
+<col style="width: 61%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>code</th>
-<th>task</th>
-<th>description</th>
+<th style="text-align: left;">code</th>
+<th style="text-align: left;">task</th>
+<th style="text-align: left;">description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>sat</td>
-<td>OntologyCoherencyTask</td>
-<td>A task to determine if an ontology is coherent. There should be a single answer, which is a boolean.</td>
+<td style="text-align: left;">sat</td>
+<td style="text-align: left;">OntologyCoherencyTask</td>
+<td style="text-align: left;">A task to determine if an ontology is coherent.</td>
 </tr>
 <tr class="even">
-<td>indirect</td>
-<td>EntailedIndirectSuperClassTask</td>
-<td>A task to determine the indirect superclasses of a class.</td>
+<td style="text-align: left;">indirect</td>
+<td style="text-align: left;">EntailedIndirectSuperClassTask</td>
+<td style="text-align: left;">A task to determine the indirect superclasses of a class.</td>
 </tr>
 <tr class="odd">
-<td>superc</td>
-<td>EntailedTransitiveSuperClassTask</td>
-<td>A task to determine the all transitive superclasses of a class.</td>
+<td style="text-align: left;">superc</td>
+<td style="text-align: left;">EntailedTransitiveSuperClassTask</td>
+<td style="text-align: left;">A task to determine the all transitive superclasses of a class.</td>
 </tr>
 <tr class="even">
-<td>expr</td>
-<td>EntailedSubClassOfExpressionTask</td>
-<td>A task to determine the subclasses of a class expression.</td>
+<td style="text-align: left;">expr</td>
+<td style="text-align: left;">EntailedSubClassOfExpressionTask</td>
+<td style="text-align: left;">A task to determine the subclasses of a class expression.</td>
 </tr>
 <tr class="odd">
-<td>dir-sup</td>
-<td>EntailedDirectSuperClassTask</td>
-<td>A task to determine the direct superclasses of a class. Includes those entailed by other axioms, e.g. equivalence axioms. Context: a standard pattern in bio-ontologies is to infer the structure of one ontology from another - e.g. the metabolic process branch in GO may be entailed by GO equivalence axioms plus the IS_A links in CHEBI.</td>
+<td style="text-align: left;">dir-sup</td>
+<td style="text-align: left;">EntailedDirectSuperClassTask</td>
+<td style="text-align: left;">A task to determine the direct superclasses of a class.</td>
 </tr>
 <tr class="even">
-<td>mrca</td>
-<td>MostRecentCommonSubsumerTask</td>
-<td>A task to determine the most specific common ancestors.</td>
+<td style="text-align: left;">mrca</td>
+<td style="text-align: left;">MostRecentCommonSubsumerTask</td>
+<td style="text-align: left;">A task to determine the most specific common ancestors.</td>
 </tr>
 <tr class="odd">
-<td>abox</td>
-<td>ABoxTask</td>
-<td>A task to infer assertions over property chains and transitvity in aboxes.</td>
+<td style="text-align: left;">abox</td>
+<td style="text-align: left;">ABoxTask</td>
+<td style="text-align: left;">A task to infer assertions over property chains and transitvity in aboxes.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tc</td>
+<td style="text-align: left;">TaxonConstraintTask</td>
+<td style="text-align: left;">A task to infer validity of a term for a particular taxon.</td>
 </tr>
 </tbody>
 </table>
-<p>➜</p>
+</div>
+<p>These are designed to test the kinds of reasoning abilities that are relevant for common knowledge-based
+inference tasks. For example, the <code>mrca</code> tasks tests the ability to find commonalities using an ontology,
+as used in semantic similarity algorithms underpinning phenotype-based variant prioritization. The <code>abox</code>
+task is useful for link prediction over instance data, the <code>tc</code> task tests the ability to check the validity
+of predicted gene functional associations, and the <code>expr</code> task reflects the ability to perform the kind
+of transitive reasoning underpinning gene set enrichment.</p>
+<p>For each task, we randomly generate 20 tasks using a fragment of either the Gene Ontology (GO) or the
+Family History Knowledge Base (FHK) ontology.</p>
 <h3 id="gpt-based-reasoning-agent">GPT-based reasoning agent</h3>
 <p>We created a GPT-based reasoning agent that is intended to perform ontological reason using
 a few-shot learning approach, using instruction prompting and in-context examples.</p>
-<p>The reasoning agent is implemented as part of the OntoGPT system.</p>
-<p>3 methods for performing reasoning were implemented:</p>
-<ul>
-<li>direct</li>
+<p>The structure of the prompts used in the agent is as follows:</p>
+<pre><code>I will provide an ontology as a list of axioms using OWL syntax. I will then ask a question about the ontology.
+Answer the question, after performing reasoning over the ontology.
+If there are multiple answers, list them all each on a separate line starting with the minus symbol (&quot;-&quot;), like a markdown list.
+Here are some examples:
+
+{{ examples }}
+--
+
+Here is the actual ontology
+
+{{ ontology }}
+
+Query:
+
+{{ question }}
+{{ task_specific_prompt }}    </code></pre>
+<p>Examples are task specific and can be parameterized by the means in which the LLM
+is expected to “show its working”. For example, the <code>expr</code> task includes examples
+such as the following:</p>
+<pre class="jinja"><code>
+- P type TransitiveProperty
+- E2 SubClassOf P some E
+- E SubClassOf B
+- B SubClassOf P some A
+- C SubClassOf A
+- D SubClassOf Q some B
+
+
+QUERY: 
+What are the entailed subclasses of the expression PartOf Some P?
+Include indirect (transitive) descendants.
+        
+ANSWERS:
+- B [  B SubClassOf P some A ; ]
+- E [  E SubClassOf B ;  B SubClassOf P some A ; ]
+- E2 [  B SubClassOf P some A ;  E SubClassOf B ;  E2 SubClassOf P some E ; ]</code></pre>
+<p>The actual ontology is provided with by using controlled natural language
+descriptions of Description Logic axioms. Opaque ontology identifiers are translated
+to CamelCase labels, or, optionally, to labels obfuscated via base64 encoding of the
+labels.</p>
+<p>An example task ontology is:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> OrganelleEnvelope SubClassOf PartOf Some IntracellularOrganelle</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> CellCortex SubClassOf Cytoplasm</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> CellCortexRegion SubClassOf PartOf Some CellCortex</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> CellCortexRegion SubClassOf CellCortex</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> CellCortexRegion SubClassOf CytoplasmicRegion</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> NuclearMembrane SubClassOf PartOf Some Nucleus</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> NuclearMembrane SubClassOf PartOf Some NuclearEnvelope</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> IntracellularMembraneBoundedOrganelle SubClassOf PartOf Some IntracellularAnatomicalStructure</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> IntracellularMembraneBoundedOrganelle SubClassOf IntracellularOrganelle</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Vacuole SubClassOf PartOf Some Cytoplasm</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Vacuole SubClassOf IntracellularMembraneBoundedOrganelle</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> IntracellularOrganelle SubClassOf PartOf Some IntracellularAnatomicalStructure</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> NuclearEnvelope SubClassOf PartOf Some Nucleus</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> NuclearEnvelope SubClassOf OrganelleEnvelope</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Nucleus SubClassOf IntracellularMembraneBoundedOrganelle</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> CytoplasmicRegion SubClassOf PartOf Some Cytoplasm</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> CytoplasmicRegion SubClassOf Cytoplasm</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="kw">-</span><span class="at"> Cytoplasm SubClassOf PartOf Some IntracellularAnatomicalStructure</span></span></code></pre></div>
+<p>Finally, the question is generated according to a task-specific template.</p>
+<p>For the <code>expr</code> template is:</p>
+<p><code>What are the entailed subclasses of the expression {{ predicate }} Some {{ filler }}?</code></p>
+<p>For example:</p>
+<p><code>What are the entailed subclasses of the expression PartOf Some IntracellularAnatomicalStructure?</code></p>
+<h3 id="chain-of-thought-methods">Chain of thought methods</h3>
+<p>Chain of thought prompts have been demonstrated to improve LLM reasoning abilities.</p>
+<p>We explore 3 alternate methods for exploring the effect of chain of thought:</p>
+<ol type="1">
+<li>no explanations solicited</li>
 <li>post-hoc explanation-based</li>
 <li>chain-of-thought reasoning</li>
-</ul>
-<h4 id="direct-reasoning">Direct reasoning</h4>
+</ol>
+<p>For the first, no explanations are requested or shown in the examples.</p>
+<p>For the second, the OWL axioms are included after each answer</p>
+<p>For the third, natural language descriptions of the reasoning steps are shown prior to each answer.</p>
+<h3 id="models">Models</h3>
+<p>We used both gpt-3.5-turbo and gpt-4 models (TODO: Falcon). We interfaced the GPT models via
+the OpenAI API.</p>
+<h3 id="scoring">Scoring</h3>
+<p>We calculated standard precision, recall, and accuracy metrics for each execution. We only evaluate the
+core answer, and do not attempt to evaluate the explanations. All tasks yield a list of answers, although
+some tasks only yield a single valid/invalid answer, so precision/recall on these tasks are individually
+zero or one.</p>
+<h3 id="implementation">Implementation</h3>
+<p>The reasoning agent is implemented as part of the OntoGPT system.</p>
+<p>Interfacing with ontologies is done via the Ontology Access Kit (OAK) Library.</p>
 <h2 id="results">Results</h2>
 <h3 id="core-results">Core Results</h3>
-<style type="text/css">
-#T_1946c_row0_col4, #T_1946c_row1_col4, #T_1946c_row2_col4, #T_1946c_row3_col0, #T_1946c_row3_col2, #T_1946c_row3_col4, #T_1946c_row3_col5, #T_1946c_row4_col4, #T_1946c_row5_col1, #T_1946c_row5_col3, #T_1946c_row5_col4 {
-  font-weight: bold;
-}
-</style>
-<table id="T_1946c">
+<p>We ran all non-obfuscated benchmarks through all models and scored the results,
+summarized in <a href="#tbl:main-results">2</a>.</p>
+<div id="tbl:main-results" class="tablenos">
+<table id="tbl:main-results" style="width:100%;">
+<caption><span>Table 2:</span> Results over all tasks (no obfuscation)
+</caption>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
 <thead>
-<tr>
-<th class="blank">
- 
-</th>
-<th class="index_name level0">
-task
-</th>
-<th id="T_1946c_level0_col0" class="col_heading level0 col0">
-abox
-</th>
-<th id="T_1946c_level0_col1" class="col_heading level0 col1">
-expr
-</th>
-<th id="T_1946c_level0_col2" class="col_heading level0 col2">
-indirect
-</th>
-<th id="T_1946c_level0_col3" class="col_heading level0 col3">
-mrca
-</th>
-<th id="T_1946c_level0_col4" class="col_heading level0 col4">
-sat
-</th>
-<th id="T_1946c_level0_col5" class="col_heading level0 col5">
-superc
-</th>
-</tr>
-<tr>
-<th class="index_name level0">
-model
-</th>
-<th class="index_name level1">
-mthd
-</th>
-<th class="blank col0">
- 
-</th>
-<th class="blank col1">
- 
-</th>
-<th class="blank col2">
- 
-</th>
-<th class="blank col3">
- 
-</th>
-<th class="blank col4">
- 
-</th>
-<th class="blank col5">
- 
-</th>
+<tr class="header">
+<th style="text-align: left;">model</th>
+<th style="text-align: left;">mthd</th>
+<th style="text-align: left;">abox</th>
+<th style="text-align: left;">expr</th>
+<th style="text-align: left;">inds</th>
+<th style="text-align: left;">mrca</th>
+<th style="text-align: left;">sat</th>
+<th style="text-align: left;">sup</th>
+<th style="text-align: left;">tc</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<th id="T_1946c_level0_row0" class="row_heading level0 row0" rowspan="3">
-gpt-3.5-turbo
-</th>
-<th id="T_1946c_level1_row0" class="row_heading level1 row0">
-basic
-</th>
-<td id="T_1946c_row0_col0" class="data row0 col0">
-0.642
-</td>
-<td id="T_1946c_row0_col1" class="data row0 col1">
-0.718
-</td>
-<td id="T_1946c_row0_col2" class="data row0 col2">
-0.739
-</td>
-<td id="T_1946c_row0_col3" class="data row0 col3">
-0.067
-</td>
-<td id="T_1946c_row0_col4" class="data row0 col4">
-0.000
-</td>
-<td id="T_1946c_row0_col5" class="data row0 col5">
-0.805
-</td>
+<tr class="odd">
+<td style="text-align: left;">gpt-3.5-turbo</td>
+<td style="text-align: left;">basic</td>
+<td style="text-align: left;">0.64</td>
+<td style="text-align: left;">0.72</td>
+<td style="text-align: left;">0.74</td>
+<td style="text-align: left;">0.07</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">0.55</td>
 </tr>
-<tr>
-<th id="T_1946c_level1_row1" class="row_heading level1 row1">
-cot
-</th>
-<td id="T_1946c_row1_col0" class="data row1 col0">
-0.305
-</td>
-<td id="T_1946c_row1_col1" class="data row1 col1">
-0.623
-</td>
-<td id="T_1946c_row1_col2" class="data row1 col2">
-0.587
-</td>
-<td id="T_1946c_row1_col3" class="data row1 col3">
-0.100
-</td>
-<td id="T_1946c_row1_col4" class="data row1 col4">
-0.000
-</td>
-<td id="T_1946c_row1_col5" class="data row1 col5">
-0.584
-</td>
+<tr class="even">
+<td style="text-align: left;">gpt-3.5-turbo</td>
+<td style="text-align: left;">cot</td>
+<td style="text-align: left;">0.31</td>
+<td style="text-align: left;">0.62</td>
+<td style="text-align: left;">0.59</td>
+<td style="text-align: left;">0.10</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.58</td>
+<td style="text-align: left;">0.55</td>
 </tr>
-<tr>
-<th id="T_1946c_level1_row2" class="row_heading level1 row2">
-expl
-</th>
-<td id="T_1946c_row2_col0" class="data row2 col0">
-0.571
-</td>
-<td id="T_1946c_row2_col1" class="data row2 col1">
-0.756
-</td>
-<td id="T_1946c_row2_col2" class="data row2 col2">
-0.562
-</td>
-<td id="T_1946c_row2_col3" class="data row2 col3">
-0.033
-</td>
-<td id="T_1946c_row2_col4" class="data row2 col4">
-0.000
-</td>
-<td id="T_1946c_row2_col5" class="data row2 col5">
-0.689
-</td>
+<tr class="odd">
+<td style="text-align: left;">gpt-3.5-turbo</td>
+<td style="text-align: left;">expl</td>
+<td style="text-align: left;">0.57</td>
+<td style="text-align: left;">0.76</td>
+<td style="text-align: left;">0.56</td>
+<td style="text-align: left;">0.03</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.69</td>
+<td style="text-align: left;">0.62</td>
 </tr>
-<tr>
-<th id="T_1946c_level0_row3" class="row_heading level0 row3" rowspan="3">
-gpt-4
-</th>
-<th id="T_1946c_level1_row3" class="row_heading level1 row3">
-basic
-</th>
-<td id="T_1946c_row3_col0" class="data row3 col0">
-1.000
-</td>
-<td id="T_1946c_row3_col1" class="data row3 col1">
-0.844
-</td>
-<td id="T_1946c_row3_col2" class="data row3 col2">
-0.940
-</td>
-<td id="T_1946c_row3_col3" class="data row3 col3">
-0.150
-</td>
-<td id="T_1946c_row3_col4" class="data row3 col4">
-0.000
-</td>
-<td id="T_1946c_row3_col5" class="data row3 col5">
-0.961
-</td>
+<tr class="even">
+<td style="text-align: left;">gpt-4</td>
+<td style="text-align: left;">basic</td>
+<td style="text-align: left;"><strong>1.00</strong></td>
+<td style="text-align: left;">0.84</td>
+<td style="text-align: left;"><strong>0.94</strong></td>
+<td style="text-align: left;">0.15</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;"><strong>0.96</strong></td>
+<td style="text-align: left;"><strong>0.75</strong></td>
 </tr>
-<tr>
-<th id="T_1946c_level1_row4" class="row_heading level1 row4">
-cot
-</th>
-<td id="T_1946c_row4_col0" class="data row4 col0">
-0.929
-</td>
-<td id="T_1946c_row4_col1" class="data row4 col1">
-0.664
-</td>
-<td id="T_1946c_row4_col2" class="data row4 col2">
-0.814
-</td>
-<td id="T_1946c_row4_col3" class="data row4 col3">
-0.150
-</td>
-<td id="T_1946c_row4_col4" class="data row4 col4">
-0.000
-</td>
-<td id="T_1946c_row4_col5" class="data row4 col5">
-0.794
-</td>
+<tr class="odd">
+<td style="text-align: left;">gpt-4</td>
+<td style="text-align: left;">cot</td>
+<td style="text-align: left;">0.89</td>
+<td style="text-align: left;">0.66</td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;">0.15</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.79</td>
+<td style="text-align: left;">0.30</td>
 </tr>
-<tr>
-<th id="T_1946c_level1_row5" class="row_heading level1 row5">
-expl
-</th>
-<td id="T_1946c_row5_col0" class="data row5 col0">
-0.994
-</td>
-<td id="T_1946c_row5_col1" class="data row5 col1">
-0.849
-</td>
-<td id="T_1946c_row5_col2" class="data row5 col2">
-0.813
-</td>
-<td id="T_1946c_row5_col3" class="data row5 col3">
-0.183
-</td>
-<td id="T_1946c_row5_col4" class="data row5 col4">
-0.000
-</td>
-<td id="T_1946c_row5_col5" class="data row5 col5">
-0.960
-</td>
+<tr class="even">
+<td style="text-align: left;">gpt-4</td>
+<td style="text-align: left;">expl</td>
+<td style="text-align: left;">0.99</td>
+<td style="text-align: left;"><strong>0.85</strong></td>
+<td style="text-align: left;">0.81</td>
+<td style="text-align: left;"><strong>0.18</strong></td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.96</td>
+<td style="text-align: left;">0.55</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>These results show that generally GPT-4 improves over GPT-3.5-turbo. They also show
+that attempting to elicit an explanation or chain of thought reasoning actually reduces
+accuracy, and the best results are found using the <code>basic</code> strategy.</p>
 <h3 id="obfuscation">Obfuscation</h3>
-<style type="text/css">
-#T_76227_row0_col4, #T_76227_row1_col4, #T_76227_row2_col4, #T_76227_row3_col0, #T_76227_row3_col2, #T_76227_row3_col3, #T_76227_row3_col4, #T_76227_row3_col5, #T_76227_row4_col1, #T_76227_row4_col3, #T_76227_row4_col4, #T_76227_row5_col4 {
-  font-weight: bold;
-}
-</style>
-<table id="T_76227">
+<p>To test whether the LLM performance was dependent on prior knowledge of the ontologies
+used, we performed an additional test with obfuscated ontologies. Here we obfuscated
+classes, individuals, and predicates, replacing each with its
+base 64 representation. However, we left builtin OWL language constructs
+such as SubClassOf intact. These results are show in <a href="#tbl:obfuscated-results">3</a>.</p>
+<div id="tbl:obfuscated-results" class="tablenos">
+<table id="tbl:obfuscated-results">
+<caption><span>Table 3:</span> Results on obfuscated ontologies
+</caption>
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
 <thead>
-<tr>
-<th class="blank">
- 
-</th>
-<th class="index_name level0">
-task
-</th>
-<th id="T_76227_level0_col0" class="col_heading level0 col0">
-abox
-</th>
-<th id="T_76227_level0_col1" class="col_heading level0 col1">
-expr
-</th>
-<th id="T_76227_level0_col2" class="col_heading level0 col2">
-indirect
-</th>
-<th id="T_76227_level0_col3" class="col_heading level0 col3">
-mrca
-</th>
-<th id="T_76227_level0_col4" class="col_heading level0 col4">
-sat
-</th>
-<th id="T_76227_level0_col5" class="col_heading level0 col5">
-superc
-</th>
-</tr>
-<tr>
-<th class="index_name level0">
-model
-</th>
-<th class="index_name level1">
-method
-</th>
-<th class="blank col0">
- 
-</th>
-<th class="blank col1">
- 
-</th>
-<th class="blank col2">
- 
-</th>
-<th class="blank col3">
- 
-</th>
-<th class="blank col4">
- 
-</th>
-<th class="blank col5">
- 
-</th>
+<tr class="header">
+<th style="text-align: left;">model</th>
+<th style="text-align: left;">method</th>
+<th style="text-align: left;">abox</th>
+<th style="text-align: left;">expr</th>
+<th style="text-align: left;">inds</th>
+<th style="text-align: left;">mrca</th>
+<th style="text-align: left;">sat</th>
+<th style="text-align: left;">sup</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<th id="T_76227_level0_row0" class="row_heading level0 row0" rowspan="3">
-gpt-3.5-turbo
-</th>
-<th id="T_76227_level1_row0" class="row_heading level1 row0">
-basic
-</th>
-<td id="T_76227_row0_col0" class="data row0 col0">
-0.000
-</td>
-<td id="T_76227_row0_col1" class="data row0 col1">
-0.270
-</td>
-<td id="T_76227_row0_col2" class="data row0 col2">
-0.256
-</td>
-<td id="T_76227_row0_col3" class="data row0 col3">
-0.000
-</td>
-<td id="T_76227_row0_col4" class="data row0 col4">
-0.000
-</td>
-<td id="T_76227_row0_col5" class="data row0 col5">
-0.426
-</td>
+<tr class="odd">
+<td style="text-align: left;">gpt-3.5-turbo</td>
+<td style="text-align: left;">basic</td>
+<td style="text-align: left;">0.00</td>
+<td style="text-align: left;">0.27</td>
+<td style="text-align: left;">0.26</td>
+<td style="text-align: left;">0.00</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.43</td>
 </tr>
-<tr>
-<th id="T_76227_level1_row1" class="row_heading level1 row1">
-chain_of_thought
-</th>
-<td id="T_76227_row1_col0" class="data row1 col0">
-0.000
-</td>
-<td id="T_76227_row1_col1" class="data row1 col1">
-0.131
-</td>
-<td id="T_76227_row1_col2" class="data row1 col2">
-0.161
-</td>
-<td id="T_76227_row1_col3" class="data row1 col3">
-0.100
-</td>
-<td id="T_76227_row1_col4" class="data row1 col4">
-0.000
-</td>
-<td id="T_76227_row1_col5" class="data row1 col5">
-0.390
-</td>
+<tr class="even">
+<td style="text-align: left;">gpt-3.5-turbo</td>
+<td style="text-align: left;">chain_of_thought</td>
+<td style="text-align: left;">0.00</td>
+<td style="text-align: left;">0.13</td>
+<td style="text-align: left;">0.16</td>
+<td style="text-align: left;">0.10</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.39</td>
 </tr>
-<tr>
-<th id="T_76227_level1_row2" class="row_heading level1 row2">
-explanation
-</th>
-<td id="T_76227_row2_col0" class="data row2 col0">
-0.000
-</td>
-<td id="T_76227_row2_col1" class="data row2 col1">
-0.216
-</td>
-<td id="T_76227_row2_col2" class="data row2 col2">
-0.207
-</td>
-<td id="T_76227_row2_col3" class="data row2 col3">
-0.050
-</td>
-<td id="T_76227_row2_col4" class="data row2 col4">
-0.000
-</td>
-<td id="T_76227_row2_col5" class="data row2 col5">
-0.471
-</td>
+<tr class="odd">
+<td style="text-align: left;">gpt-3.5-turbo</td>
+<td style="text-align: left;">explanation</td>
+<td style="text-align: left;">0.00</td>
+<td style="text-align: left;">0.22</td>
+<td style="text-align: left;">0.21</td>
+<td style="text-align: left;">0.05</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.47</td>
 </tr>
-<tr>
-<th id="T_76227_level0_row3" class="row_heading level0 row3" rowspan="3">
-gpt-4
-</th>
-<th id="T_76227_level1_row3" class="row_heading level1 row3">
-basic
-</th>
-<td id="T_76227_row3_col0" class="data row3 col0">
-0.764
-</td>
-<td id="T_76227_row3_col1" class="data row3 col1">
-0.551
-</td>
-<td id="T_76227_row3_col2" class="data row3 col2">
-0.837
-</td>
-<td id="T_76227_row3_col3" class="data row3 col3">
-0.200
-</td>
-<td id="T_76227_row3_col4" class="data row3 col4">
-0.000
-</td>
-<td id="T_76227_row3_col5" class="data row3 col5">
-0.912
-</td>
+<tr class="even">
+<td style="text-align: left;">gpt-4</td>
+<td style="text-align: left;">basic</td>
+<td style="text-align: left;"><strong>0.76</strong></td>
+<td style="text-align: left;">0.55</td>
+<td style="text-align: left;"><strong>0.84</strong></td>
+<td style="text-align: left;"><strong>0.20</strong></td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;"><strong>0.91</strong></td>
 </tr>
-<tr>
-<th id="T_76227_level1_row4" class="row_heading level1 row4">
-chain_of_thought
-</th>
-<td id="T_76227_row4_col0" class="data row4 col0">
-0.568
-</td>
-<td id="T_76227_row4_col1" class="data row4 col1">
-0.818
-</td>
-<td id="T_76227_row4_col2" class="data row4 col2">
-0.506
-</td>
-<td id="T_76227_row4_col3" class="data row4 col3">
-0.200
-</td>
-<td id="T_76227_row4_col4" class="data row4 col4">
-0.000
-</td>
-<td id="T_76227_row4_col5" class="data row4 col5">
-0.718
-</td>
+<tr class="odd">
+<td style="text-align: left;">gpt-4</td>
+<td style="text-align: left;">chain_of_thought</td>
+<td style="text-align: left;">0.57</td>
+<td style="text-align: left;"><strong>0.82</strong></td>
+<td style="text-align: left;">0.51</td>
+<td style="text-align: left;"><strong>0.20</strong></td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.72</td>
 </tr>
-<tr>
-<th id="T_76227_level1_row5" class="row_heading level1 row5">
-explanation
-</th>
-<td id="T_76227_row5_col0" class="data row5 col0">
-0.631
-</td>
-<td id="T_76227_row5_col1" class="data row5 col1">
-0.728
-</td>
-<td id="T_76227_row5_col2" class="data row5 col2">
-0.701
-</td>
-<td id="T_76227_row5_col3" class="data row5 col3">
-0.167
-</td>
-<td id="T_76227_row5_col4" class="data row5 col4">
-0.000
-</td>
-<td id="T_76227_row5_col5" class="data row5 col5">
-0.812
-</td>
+<tr class="even">
+<td style="text-align: left;">gpt-4</td>
+<td style="text-align: left;">explanation</td>
+<td style="text-align: left;">0.63</td>
+<td style="text-align: left;">0.73</td>
+<td style="text-align: left;">0.70</td>
+<td style="text-align: left;">0.17</td>
+<td style="text-align: left;"><strong>0.00</strong></td>
+<td style="text-align: left;">0.81</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Obfuscation resulted in drastically reduced performance for GPT-3.5 in the <code>abox</code> task.
+The decrease is less marked with GPT-4. On other tasks, obfuscation had little effect
+on GPT-4, and in some cases performance was slightly improved.</p>
 <h3 id="effect-of-chain-lengths">Effect of chain lengths</h3>
+<p>We explored the effect of the complexity of the explanation for an inference on performance, using
+the transitive reasoning task. This is shown in ??</p>
+<p><img src="images/complexity-scatter-plot.png" id="fig:complexity-scatter-plot" style="width:7in;height:4in" alt="Complexity" />
+Effect of path length on accuracy of transitive reasoning task. The x-axis shows the length of the path,
+the y axis is the accuracy (F1).</p>
+<p>For GPT-3.5 performance degraded with the size of explanation (length of paths). For GPT-4, performance
+remained constant regardless of path length.</p>
 <h2 id="discussion">Discussion</h2>
-<p>blah</p>
+<h3 id="implications-of-study">Implications of study</h3>
+<p>In this study we set out to investigate the performance of LLMs on ontological reasoning tasks.
+We consider the question of whether LLMs are actually performing reasoning to be out of scope.
+It may be the case that the LLMs are simply relying on higher-order pattern matching against a
+massive bank of examples.</p>
+<p>We are concerned with performance, because we observe that there is a tendency to use LLMs
+as single-pass question-answer agents, where reasoning may be a subcomponent of the overall
+task. Sometimes the reasoning step might not be explicit, and the effects of incomplete
+reasoning may not be readily apparent. For example, when performing a task such as gene set
+summarization, we would like the LLM to take into account hierarchical classification of gene
+descriptors, and to make use of basic reasoning as part of finding commonalities.
+If it is the case that LLMs are incomplete reasoners on reasoning-specific tasks, it is likely
+they will yield incomplete results on tasks that involve a reasoning component.
+This would suggest that hybrid strategies that combine LLMs with more traditional reasoning
+would yield the best results.</p>
+<p>There are a number of different mechanisms by which an LLM-based architecture could leverage
+a hybrid approach. The ChatGPT plugin system allows an LLM to be combined with crisp knowledge
+base lookup and sound inference procedures - for example, via the Mathematica plugin. Frameworks
+such as LangChain allow for use of the ReAct and MKLR patterns, in which the LLM can act as a
+controller, and select an external service or agent for a component of task. Currently there
+are no symbolic reasoner plugins of the form used for ontological reasoning, but these
+could form a powerful part of a hybrid neurosymbolic system.</p>
+<h3 id="benchmark-limitations">Benchmark limitations</h3>
+<p>Our benchmark currently only covers the EL++ subset of OWL (the taxon constraint task is
+explicitly formulated to include non-EL axioms, but the task can easily be reformulated
+as an EL++ one).</p>
+<p>The benchmarks are intentionally small, due to the need to fit in current LLM content windows
+(8k for the standard GPT-4 model). Most ontologies are typically larger, so even in cases
+where LLMs perform well, it doesn’t necessarily hold that an LLM with a larger context window
+will perform as well for larger ontologies.</p>
 <h2 id="conclusions">Conclusions</h2>
-<p>blah</p>
+<p>We created a series of benchmarks for evaluating the performance of LLMs on ontological reasoning
+tasks in the EL++ subset.</p>
+<p>We have demonstrated that LLMs are capable of simulating reasoning for certain simple tasks,
+with GPT-4 outperforming the smaller GPT-3.5. However, even
+when they perform well, they do not perform as well as standard symbolic reasoners which are guaranteed
+to be sound and complete. This indicates that single-pass LLM based approaches on knowledge-oriented
+tasks may hide incomplete results, and that hybrid neuro-symbolic approaches are likely to yield
+better performance on complex real-world knowledge-oriented tasks.</p>
 <h2 class="page_break_before" id="references">References</h2>
 <!-- Explicitly insert bibliography here -->
 <div id="refs" class="references csl-bib-body" role="doc-bibliography">
