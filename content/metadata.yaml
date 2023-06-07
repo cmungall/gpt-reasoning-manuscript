@@ -1,5 +1,6 @@
 ---
-title: "Reasoning over ontologies using Large Language Models"
+title: >-
+  Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches
 date: null  # Defaults to date generated, but can specify like '2022-10-31'.
 keywords:
   - GPT
@@ -9,18 +10,21 @@ keywords:
   - Ontologies
 lang: en-US
 authors:
-  - github: johndoe
-    name: John Doe
-    initials: JD
+  - github: sierra-moxon
+    name: Sierra Moxon
+    initials: SM
     orcid: XXXX-XXXX-XXXX-XXXX
-    twitter: johndoe
-    mastodon: johndoe
-    mastodon-server: mastodon.social
-    email: john.doe@something.com
     affiliations:
-      - Department of Something, University of Whatever
+      - Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720
     funders:
       - Grant XXXXXXXX
+  - github: matentzn
+    name: Nico Matentzoglu
+    initials: NM
+    orcid: XXXX-XXXX-XXXX-XXXX
+  - name: Hyeongsik Kim
+    initials: HK
+    orcid: XXXX-XXXX-XXXX-XXXX
   - github: cmungall
     name: Chris Mungall
     initials: CM

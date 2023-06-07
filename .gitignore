@@ -1,6 +1,7 @@
 # Generated manuscript output files
 output/*
 !output/README.md
+.idea
 
 webpage/v
 
