@@ -1,6 +1,6 @@
 {
   "pandoc": {
-    "title": "Reasoning over ontologies using Large Language Models",
+    "title": "Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches",
     "keywords": [
       "GPT",
       "Large Language Models",
@@ -9,12 +9,14 @@
       "Ontologies"
     ],
     "lang": "en-US",
-    "date-meta": "2023-05-30",
+    "date-meta": "2023-06-07",
     "author-meta": [
-      "John Doe",
+      "Sierra Moxon",
+      "Nico Matentzoglu",
+      "Hyeongsik Kim",
       "Chris Mungall"
     ],
-    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta name=\"dc.title\" content=\"Reasoning over ontologies using Large Language Models\" />\n<meta name=\"citation_title\" content=\"Reasoning over ontologies using Large Language Models\" />\n<meta property=\"og:title\" content=\"Reasoning over ontologies using Large Language Models\" />\n<meta property=\"twitter:title\" content=\"Reasoning over ontologies using Large Language Models\" />\n<meta name=\"dc.date\" content=\"2023-05-30\" />\n<meta name=\"citation_publication_date\" content=\"2023-05-30\" />\n<meta property=\"article:published_time\" content=\"2023-05-30\" />\n<meta name=\"dc.modified\" content=\"2023-05-30T18:46:22+00:00\" />\n<meta property=\"article:modified_time\" content=\"2023-05-30T18:46:22+00:00\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"John Doe\" />\n<meta name=\"citation_author_institution\" content=\"Department of Something, University of Whatever\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"twitter:creator\" content=\"@johndoe\" />\n<meta name=\"citation_author\" content=\"Chris Mungall\" />\n<meta name=\"citation_author_institution\" content=\"Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-6601-2165\" />\n<link rel=\"canonical\" href=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta property=\"og:url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->\n",
+    "header-includes": "<!--\nManubot generated metadata rendered from header-includes-template.html.\nSuggest improvements at https://github.com/manubot/manubot/blob/main/manubot/process/header-includes-template.html\n-->\n<meta name=\"dc.format\" content=\"text/html\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta name=\"dc.title\" content=\"Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches\" />\n<meta name=\"citation_title\" content=\"Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches\" />\n<meta property=\"og:title\" content=\"Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches\" />\n<meta property=\"twitter:title\" content=\"Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches\" />\n<meta name=\"dc.date\" content=\"2023-06-07\" />\n<meta name=\"citation_publication_date\" content=\"2023-06-07\" />\n<meta property=\"article:published_time\" content=\"2023-06-07\" />\n<meta name=\"dc.modified\" content=\"2023-06-07T02:56:52+00:00\" />\n<meta property=\"article:modified_time\" content=\"2023-06-07T02:56:52+00:00\" />\n<meta name=\"dc.language\" content=\"en-US\" />\n<meta name=\"citation_language\" content=\"en-US\" />\n<meta name=\"dc.relation.ispartof\" content=\"Manubot\" />\n<meta name=\"dc.publisher\" content=\"Manubot\" />\n<meta name=\"citation_journal_title\" content=\"Manubot\" />\n<meta name=\"citation_technical_report_institution\" content=\"Manubot\" />\n<meta name=\"citation_author\" content=\"Sierra Moxon\" />\n<meta name=\"citation_author_institution\" content=\"Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"citation_author\" content=\"Nico Matentzoglu\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"citation_author\" content=\"Hyeongsik Kim\" />\n<meta name=\"citation_author_orcid\" content=\"XXXX-XXXX-XXXX-XXXX\" />\n<meta name=\"citation_author\" content=\"Chris Mungall\" />\n<meta name=\"citation_author_institution\" content=\"Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720\" />\n<meta name=\"citation_author_orcid\" content=\"0000-0002-6601-2165\" />\n<link rel=\"canonical\" href=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta property=\"og:url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta property=\"twitter:url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta name=\"citation_fulltext_html_url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/\" />\n<meta name=\"citation_pdf_url\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"application/pdf\" href=\"https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf\" />\n<link rel=\"alternate\" type=\"text/html\" href=\"https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/\" />\n<meta name=\"manubot_html_url_versioned\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/\" />\n<meta name=\"manubot_pdf_url_versioned\" content=\"https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/manuscript.pdf\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"twitter:card\" content=\"summary_large_image\" />\n<link rel=\"icon\" type=\"image/png\" sizes=\"192x192\" href=\"https://manubot.org/favicon-192x192.png\" />\n<link rel=\"mask-icon\" href=\"https://manubot.org/safari-pinned-tab.svg\" color=\"#ad1457\" />\n<meta name=\"theme-color\" content=\"#ad1457\" />\n<!-- end Manubot generated metadata -->\n",
     "bibliography": [
       "content/manual-references.json"
     ],
@@ -24,23 +26,19 @@
     "manubot-clear-requests-cache": false
   },
   "manubot": {
-    "date": "2023-05-30",
-    "date_long": "May 30, 2023",
-    "generated": "2023-05-30T18:46:22+00:00",
-    "generated_date_long": "May 30, 2023",
+    "date": "2023-06-07",
+    "date_long": "June 7, 2023",
+    "generated": "2023-06-07T02:56:52+00:00",
+    "generated_date_long": "June 7, 2023",
     "randomize_author_order": false,
     "authors": [
       {
-        "github": "johndoe",
-        "name": "John Doe",
-        "initials": "JD",
+        "github": "sierra-moxon",
+        "name": "Sierra Moxon",
+        "initials": "SM",
         "orcid": "XXXX-XXXX-XXXX-XXXX",
-        "twitter": "johndoe",
-        "mastodon": "johndoe",
-        "mastodon-server": "mastodon.social",
-        "email": "john.doe@something.com",
         "affiliations": [
-          "Department of Something, University of Whatever"
+          "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720"
         ],
         "funders": [
           "Grant XXXXXXXX"
@@ -48,6 +46,19 @@
         "affiliation_numbers": [
           1
         ]
+      },
+      {
+        "github": "matentzn",
+        "name": "Nico Matentzoglu",
+        "initials": "NM",
+        "orcid": "XXXX-XXXX-XXXX-XXXX",
+        "affiliation_numbers": []
+      },
+      {
+        "name": "Hyeongsik Kim",
+        "initials": "HK",
+        "orcid": "XXXX-XXXX-XXXX-XXXX",
+        "affiliation_numbers": []
       },
       {
         "github": "cmungall",
@@ -60,18 +71,14 @@
         ],
         "corresponding": true,
         "affiliation_numbers": [
-          2
+          1
         ]
       }
     ],
     "affiliations": [
       {
-        "affiliation": "Department of Something, University of Whatever",
-        "affiliation_number": 1
-      },
-      {
         "affiliation": "Environmental Genomics and Systems Biology Division, Lawrence Berkeley National Laboratory, Berkeley, CA, 94720",
-        "affiliation_number": 2
+        "affiliation_number": 1
       }
     ],
     "ci_source": {
@@ -79,20 +86,21 @@
       "repo_slug": "cmungall/gpt-reasoning-manuscript",
       "repo_owner": "cmungall",
       "repo_name": "gpt-reasoning-manuscript",
-      "commit": "fba1ca342483d3961a7bdb85d0d58485561ad9a3",
-      "triggering_commit": "fba1ca342483d3961a7bdb85d0d58485561ad9a3",
-      "build_url": "https://github.com/cmungall/gpt-reasoning-manuscript/commit/fba1ca342483d3961a7bdb85d0d58485561ad9a3/checks",
-      "job_url": "https://github.com/cmungall/gpt-reasoning-manuscript/actions/runs/5125111123"
+      "commit": "52cc8412aaa67f4d86d1594fe98b7c96188225a9",
+      "triggering_commit": "52cc8412aaa67f4d86d1594fe98b7c96188225a9",
+      "build_url": "https://github.com/cmungall/gpt-reasoning-manuscript/commit/52cc8412aaa67f4d86d1594fe98b7c96188225a9/checks",
+      "job_url": "https://github.com/cmungall/gpt-reasoning-manuscript/actions/runs/5195448284"
     },
     "html_url": "https://cmungall.github.io/gpt-reasoning-manuscript/",
     "pdf_url": "https://cmungall.github.io/gpt-reasoning-manuscript/manuscript.pdf",
-    "html_url_versioned": "https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/",
-    "pdf_url_versioned": "https://cmungall.github.io/gpt-reasoning-manuscript/v/fba1ca342483d3961a7bdb85d0d58485561ad9a3/manuscript.pdf",
+    "html_url_versioned": "https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/",
+    "pdf_url_versioned": "https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/manuscript.pdf",
     "manubot_version": "0.5.5",
     "rootstock_commit": "72a96c90f2aab350de5e06f57587f654d5df1d6b",
     "manuscript_stats": {
-      "word_count": 1936
+      "word_count": 2888
     }
   },
-  "test": 1
+  "obfuscated_results": " | model      | method     | abox       | expr       | inds       | mrca       | sat        | sup        | \n | :---       | :---       | :---       | :---       | :---       | :---       | :---       | :---       | \n | gpt-3.5-turbo | basic      | 0.00       | 0.27       | 0.26       | 0.00       | **0.00**   | 0.43       | \n | gpt-3.5-turbo | chain_of_thought | 0.00       | 0.13       | 0.16       | 0.10       | **0.00**   | 0.39       | \n | gpt-3.5-turbo | explanation | 0.00       | 0.22       | 0.21       | 0.05       | **0.00**   | 0.47       | \n | gpt-4      | basic      | **0.76**   | 0.55       | **0.84**   | **0.20**   | **0.00**   | **0.91**   | \n | gpt-4      | chain_of_thought | 0.57       | **0.82**   | 0.51       | **0.20**   | **0.00**   | 0.72       | \n | gpt-4      | explanation | 0.63       | 0.73       | 0.70       | 0.17       | **0.00**   | 0.81       | \n",
+  "main_results": " | model      | mthd       | abox       | expr       | inds       | mrca       | sat        | sup        | tc         | \n | :---       | :---       | :---       | :---       | :---       | :---       | :---       | :---       | :---       | \n | gpt-3.5-turbo | basic      | 0.64       | 0.72       | 0.74       | 0.07       | **0.00**   | 0.81       | 0.55       | \n | gpt-3.5-turbo | cot        | 0.31       | 0.62       | 0.59       | 0.10       | **0.00**   | 0.58       | 0.55       | \n | gpt-3.5-turbo | expl       | 0.57       | 0.76       | 0.56       | 0.03       | **0.00**   | 0.69       | 0.62       | \n | gpt-4      | basic      | **1.00**   | 0.84       | **0.94**   | 0.15       | **0.00**   | **0.96**   | **0.75**   | \n | gpt-4      | cot        | 0.89       | 0.66       | 0.81       | 0.15       | **0.00**   | 0.79       | 0.30       | \n | gpt-4      | expl       | 0.99       | **0.85**   | 0.81       | **0.18**   | **0.00**   | 0.96       | 0.55       | \n"
 }
