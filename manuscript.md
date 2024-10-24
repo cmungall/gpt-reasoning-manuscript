@@ -7,7 +7,7 @@ keywords:
 - Reasoning
 - Ontologies
 lang: en-US
-date-meta: '2024-04-05'
+date-meta: '2024-10-24'
 author-meta:
 - Sierra Moxon
 - Nico Matentzoglu
@@ -24,11 +24,11 @@ header-includes: |
   <meta name="citation_title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
   <meta property="og:title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
   <meta property="twitter:title" content="Evaluation of Large Language Models on ontology reasoning tasks and implications for neurosymbolic approaches" />
-  <meta name="dc.date" content="2024-04-05" />
-  <meta name="citation_publication_date" content="2024-04-05" />
-  <meta property="article:published_time" content="2024-04-05" />
-  <meta name="dc.modified" content="2024-04-05T16:55:06+00:00" />
-  <meta property="article:modified_time" content="2024-04-05T16:55:06+00:00" />
+  <meta name="dc.date" content="2024-10-24" />
+  <meta name="citation_publication_date" content="2024-10-24" />
+  <meta property="article:published_time" content="2024-10-24" />
+  <meta name="dc.modified" content="2024-10-24T22:53:22+00:00" />
+  <meta property="article:modified_time" content="2024-10-24T22:53:22+00:00" />
   <meta name="dc.language" content="en-US" />
   <meta name="citation_language" content="en-US" />
   <meta name="dc.relation.ispartof" content="Manubot" />
@@ -78,7 +78,7 @@ This manuscript
 ([permalink](https://cmungall.github.io/gpt-reasoning-manuscript/v/52cc8412aaa67f4d86d1594fe98b7c96188225a9/))
 was automatically generated
 from [cmungall/gpt-reasoning-manuscript@52cc841](https://github.com/cmungall/gpt-reasoning-manuscript/tree/52cc8412aaa67f4d86d1594fe98b7c96188225a9)
-on April 5, 2024.
+on October 24, 2024.
 </em></small>
 
 
